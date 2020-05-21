@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Artist;
-use App\Album;
+use App\Account;
 use Illuminate\Http\Request;
 
-class ArtistsController extends Controller
+class AccountController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,31 +35,27 @@ class ArtistsController extends Controller
      */
     public function store(Request $request)
     {
-        $artist = new Artist;
-        $artist->name = 'Timothee';
-        $artist->save();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Artist  $artist
+     * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function show(Artist $artist)
+    public function show(Account $account)
     {
-        //  $album = Album::findOrfail(6);
-        //  $artist->albums()->save($album);
-       return $artist->albums;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Artist  $artist
+     * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function edit(Artist $artist)
+    public function edit(Account $account)
     {
         //
     }
@@ -69,28 +64,22 @@ class ArtistsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Artist  $artist
+     * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Artist $artist)
+    public function update(Request $request, Account $account)
     {
-        $artist = Artist::find($artist->id);
-        $artist->name = 'KITTY MELODY';
-        $artist->save();
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Artist  $artist
+     * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Artist $artist)
+    public function destroy(Account $account)
     {
         //
     }
 }
-
-
-
-?>

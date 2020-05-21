@@ -22,6 +22,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::resource('posts', 'PostController');
 Route::resource('artists', 'ArtistsController');
+Route::resource('albums', 'AlbumsController');
 Route::apiresource('items', 'ItemController');
 
 Route::get('/users/{id}/courses/{course}', 'HomeController@signup')->middleware('auth');
@@ -38,9 +39,15 @@ Route::get('/index', 'HomeController@index');
 
 Route::get('/artists_save', 'ArtistsController@store');
 
-Route::get('/artists', 'ArtistsController@show');
+Route::get('/artists/{artist}', 'ArtistsController@show');
 
 Route::get('/artistsupdate/{artist}', 'ArtistsController@update');
+
+Route::get('/albums_show/{id}', 'AlbumsController@show');
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Albums;
+use App\Album;
 
 class AlbumsTableSeeder extends Seeder
 {
@@ -12,9 +12,9 @@ class AlbumsTableSeeder extends Seeder
      */
     public function run()
     {
-        $title = factory(App\Album::class,25)->create();
-        $artist = factory(App\Album::class,25)->create();
-        $genre = factory(App\Album::class,25)->create();
-        $artworkPath = factory(App\Album::class,25)->create();
+        $title = factory(Album::class,25)->create();
+        $artist_id = factory(Album::class,25)->create();
+        $genre = factory(Album::class,25)->create();
+        $artworkPath = factory(Album::class,25)->create();
     }
 }

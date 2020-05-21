@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Playlist;
+use App\Account;
 use Faker\Generator as Faker;
 
-$factory->define(Playlist::class, function (Faker $faker) {
+$factory->define(Account::class, function (Faker $faker) {
     return [
         //
     ];

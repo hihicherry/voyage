@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Songs;
+use App\Song;
 use Faker\Generator as Faker;
 
-$factory->define(Songs::class, function (Faker $faker) {
+$factory->define(Song::class, function (Faker $faker) {
     return [
         "title" => $faker->name,
         "artist" => $faker->randomDigit(1,25)->randomDigitNot(0),

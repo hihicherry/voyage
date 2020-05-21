@@ -16,12 +16,11 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title', 250);
-            $table->integer('artist');
             $table->integer('genre');
             $table->string('artworkPath', 500);
             $table->timestamps();
-            $table->unsignedBigInteger('artist')->index();
-            $table->foreign('artist')->references('id')->on('artists')->onDelete('cascade');
+            $table->unsignedBigInteger('artist_id')->index();
+            $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');
         });
     }
 
@@ -32,8 +31,8 @@ class CreateAlbumsTable extends Migration
      */
     public function down()
     {
-        Schema::table('albums', function(Blueprint $table){
-            $table->dropForeign(['artist']);
+         Schema::table('albums', function(Blueprint $table){
+             $table->dropForeign(['artist_id']);
         });
         Schema::dropIfExists('albums');
     }

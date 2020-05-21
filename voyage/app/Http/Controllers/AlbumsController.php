@@ -44,9 +44,13 @@ class AlbumsController extends Controller
      * @param  \App\Album  $album
      * @return \Illuminate\Http\Response
      */
-    public function show(Album $album)
+    public function show($id)
     {
-        //
+        $album = Album::find($id);
+        // return $album . 123;
+        // $album = Album::get();
+        $album->myartist->name;
+        return $album;
     }
 
     /**
