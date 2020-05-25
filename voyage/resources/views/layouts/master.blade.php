@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
         @yield('title')
+        menu('main', 'my_menu');
     </title>
 </head>
 <body>

@@ -45,6 +45,9 @@ Route::get('/artistsupdate/{artist}', 'ArtistsController@update');
 
 Route::get('/albums_show/{id}', 'AlbumsController@show');
 
+Route::get('/menu', function(){
+    return menu('frontend','my_menu');
+});
 
 
 
